@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "271874177608",
+    "firebase_url": "https://qaapp-defee.firebaseio.com",
+    "project_id": "qaapp-defee",
+    "storage_bucket": "qaapp-defee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:271874177608:android:2a159397fb93cd91",
+        "android_client_info": {
+          "package_name": "jp.techacademy.yamamoto.daisuke.qa_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "271874177608-m5b92lv1pbvbvi92cg9scus1vnhaa7h5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDk5iBoqJT4RtRSwY9E701K4lOMn37jCro"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
