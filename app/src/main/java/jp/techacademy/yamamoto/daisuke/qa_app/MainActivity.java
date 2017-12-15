@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
             HashMap map = (HashMap) dataSnapshot.getValue();
 
             // 変更があったQuestionを探す
-            for (Question question : mQuestionArrayList) {
+            for (Question question: mQuestionArrayList) {
                 if (dataSnapshot.getKey().equals(question.getQuestionUid())) {
                     // このアプリで変更がある可能性があるのは回答(Answer)のみ
                     question.getAnswers().clear();
@@ -217,6 +217,24 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.action_settings) {
+            Intent intent = new Intent(getApplicationContext(), SettingActivity.class);
+            startActivity(intent);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 }
 
 
