@@ -3,10 +3,10 @@ package jp.techacademy.yamamoto.daisuke.qa_app;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -31,14 +31,14 @@ public class AnswerSendActivity extends AppCompatActivity implements View.OnClic
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_answer_send);
 
-        // 渡ってきたQuestionのオブジェクトを保持する
+        //渡ってきたQuestionのobjを保持
         Bundle extras = getIntent().getExtras();
         mQuestion = (Question) extras.get("question");
 
-        // UIの準備
+        //UI準備
         mAnswerEditText = (EditText) findViewById(R.id.answerEditText);
         mProgress = new ProgressDialog(this);
-        mProgress.setMessage("投稿中...");
+        mProgress.setMessage("投稿中…");
 
         Button sendButton = (Button) findViewById(R.id.sendButton);
         sendButton.setOnClickListener(this);
@@ -48,17 +48,16 @@ public class AnswerSendActivity extends AppCompatActivity implements View.OnClic
     public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
         mProgress.dismiss();
 
-        if (databaseError == null) {
+        if(databaseError == null) {
             finish();
         } else {
             Snackbar.make(findViewById(android.R.id.content), "投稿に失敗しました", Snackbar.LENGTH_LONG).show();
         }
-
     }
 
     @Override
     public void onClick(View v) {
-        // キーボードが出てたら閉じる
+        //keyboardが出ていたら閉じる
         InputMethodManager im = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
         im.hideSoftInputFromWindow(v.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
 
@@ -67,23 +66,24 @@ public class AnswerSendActivity extends AppCompatActivity implements View.OnClic
 
         Map<String, String> data = new HashMap<String, String>();
 
-        // UID
+        //UID
         data.put("uid", FirebaseAuth.getInstance().getCurrentUser().getUid());
 
-        // 表示名
-        // Preferenceから名前を取る
+        //表示名
+        //Preferenceから名前を取る
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
         String name = sp.getString(Const.NameKEY, "");
         data.put("name", name);
 
-        // 回答を取得する
+        //回答を取得
         String answer = mAnswerEditText.getText().toString();
 
-        if (answer.length() == 0) {
-            // 回答が入力されていない時はエラーを表示するだけ
-            Snackbar.make(v, "回答を入力して下さい", Snackbar.LENGTH_LONG).show();
+        if(answer.length() == 0) {
+            //回答が未入力の場合はエラー表示
+            Snackbar.make(v, "回答を入力してください", Snackbar.LENGTH_LONG).show();
             return;
         }
+
         data.put("body", answer);
 
         mProgress.show();

@@ -18,8 +18,7 @@
         android:text="New Text"
         android:id="@+id/bodyTextView"
         android:inputType="textMultiLine"
-        android:layout_alignTop="@+id/imageView"
-        android:layout_toEndOf="@+id/imageView" />
+        android:layout_toRightOf="@+id/imageView" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -29,5 +28,6 @@
         android:id="@+id/nameTextView"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true" />
+
 
 </RelativeLayout>

@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "769562232666",
-    "firebase_url": "https://qaapp-23ee2.firebaseio.com",
-    "project_id": "qaapp-23ee2",
-    "storage_bucket": "qaapp-23ee2.appspot.com"
+    "project_number": "223441449488",
+    "firebase_url": "https://qaapp-6f541.firebaseio.com",
+    "project_id": "qaapp-6f541",
+    "storage_bucket": "qaapp-6f541.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:769562232666:android:2a159397fb93cd91",
+        "mobilesdk_app_id": "1:223441449488:android:2a159397fb93cd91",
         "android_client_info": {
           "package_name": "jp.techacademy.yamamoto.daisuke.qa_app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "769562232666-raqo5t5ojr8m69v30dpcj51q2bj5vij0.apps.googleusercontent.com",
+          "client_id": "223441449488-odl84cr30hfgr43tngh75o19vn0m7eh1.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAHZjGg2QUljXUTuIv7tT-CGe7tIG8KBec"
+          "current_key": "AIzaSyBC8L76llC8ZkSI6U7XQlJaurKzSMwHbHU"
         }
       ],
       "services": {

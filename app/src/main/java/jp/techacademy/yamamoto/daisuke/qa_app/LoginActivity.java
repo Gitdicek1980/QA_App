@@ -26,6 +26,9 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.HashMap;
 import java.util.Map;
 
+import jp.techacademy.yamamoto.daisuke.qa_app.Const;
+import jp.techacademy.yamamoto.daisuke.qa_app.R;
+
 public class LoginActivity extends AppCompatActivity {
 
     EditText mEmailEditText;

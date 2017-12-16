@@ -12,7 +12,10 @@
             android:id="@+id/nav_health"
             android:title="健康"/>
         <item
-            android:id="@+id/nav_compter"
+            android:id="@+id/nav_computer"
             android:title="コンピューター"/>
+        <item
+            android:id="@+id/nav_favorite"
+            android:title="お気に入り"/>
     </group>
 </menu>
