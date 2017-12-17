@@ -43,6 +43,7 @@ public class QuestionDetailActivity extends AppCompatActivity {
     //Questionを取得するChildListener
     private ChildEventListener mEventListener = new ChildEventListener() {
 
+        
         //アイテムのリストを取得
         @Override
         public void onChildAdded(DataSnapshot dataSnapshot, String s) {
