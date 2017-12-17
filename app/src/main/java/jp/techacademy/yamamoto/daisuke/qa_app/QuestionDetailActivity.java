@@ -20,6 +20,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.HashMap;
 import java.util.Map;
 
+import static jp.techacademy.yamamoto.daisuke.qa_app.MainActivity.sFavoriteQidMap;
+
 public class QuestionDetailActivity extends AppCompatActivity {
 
     private ListView mListView;
